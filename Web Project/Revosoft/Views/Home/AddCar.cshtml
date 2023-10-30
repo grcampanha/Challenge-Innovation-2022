@@ -1,0 +1,59 @@
+﻿@model Revosoft.Models.Veiculos
+
+@{
+    ViewData["Title"] = "AddCar";
+}
+
+<body id="body">
+    <section class="add-cars">
+        <h1>Novo Veículo</h1>
+
+        <h4>Veículos</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-8">
+                <form id="form-add" asp-action="AddCar">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row g-3">
+                        <div class="mb-2 col-md-4">
+                            <label asp-for="Placa" class="control-label"></label>
+                            <input asp-for="Placa" class="form-control" />
+                            <span asp-validation-for="Placa" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2 col-md-4">
+                            <label asp-for="Modelo" class="control-label"></label>
+                            <select asp-for="Modelo" class="form-control select2" data-toggle="select2">
+                                <option>Selecionar</option>
+                                <option value="Bronco">Bronco</option>
+                                <option value="EcoSport">EcoSport</option>
+                                <option value="Edge ST">Edge ST</option>
+                                <option value="Fusion">Fusion</option>
+                                <option value="Ka Hatch">Ka Hatch</option>
+                                <option value="Ka Sedan">Ka Sedan</option>
+                                <option value="Maverick">Maverick</option>
+                                <option value="Mustang">Mustang</option>
+                                <option value="Ranger">Ranger</option>
+                                <option value="Territory">Territory</option>
+                                <option value="Transit">Transit</option>
+                            </select>
+                            <span asp-validation-for="Modelo" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2 col-md-2">
+                            <label asp-for="Ano" class="control-label"></label>
+                            <input asp-for="Ano" data-toggle="input-mask" data-mask-format="0000/0000" data-reverse="true" class="form-control" />
+                            <span asp-validation-for="Ano" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2 col-md-4">
+                            <label hidden asp-for="UsuariosId" class="control-label"></label>
+                            <input hidden asp-for="UsuariosId" value="@ViewBag.UsuariosId" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <input type="submit" value="Salvar" class="btn btn-success" />
+                        <a class="btn btn-danger" asp-action="Cars">Voltar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

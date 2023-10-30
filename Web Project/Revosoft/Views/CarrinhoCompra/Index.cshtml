@@ -1,0 +1,60 @@
+﻿@model CarrinhoCompraViewModel
+<body id="body">
+<div class="Container">
+    <div class="row checkoutForm">
+
+        <div>
+            <h4 class="compra-title">Your Cart</h4>
+        </div>
+
+        <table class="tabela">
+
+            <thead>
+                <tr>
+                    <th></th>
+                    <th id="title-compra"></th>
+                    <th class=""></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.CarrinhoCompra.CarrinhoCompraItems)
+                {
+                    <tr>
+                        <td class="product-name">@item.Store.Produto</td>
+                        <td class="">Amount: @item.Quantidade</td>
+                        <td class="">
+                            @((item.Quantidade * item.Store.Preco).ToString("C"))
+                        </td>
+
+                        <td class="text-center">
+                            <a asp-controller="CarrinhoCompra" asp-action="RemoverItemDoCarrinhoCompra"
+                           asp-route-storeId="@item.Store.StoreId">
+                                <h4 class="remove">REMOVE</h4>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="text-right">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+            <div class="sumarry">
+                 <h1>Order Summary</h1>
+                 <p class="total-pedido">Total:  @Model.CarrinhoCompraTotal.ToString("c")</p>
+                <div class="btn-group">
+                    <a class="btn-comprar" asp-controller="Pedido" asp-action="Checkout">Buy</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a class="btn-items" asp-controller="Home" asp-action="Store">Add more items</a>
+                </div>
+             </div>
+        <br />
+    </div>
+</div>
+</body>

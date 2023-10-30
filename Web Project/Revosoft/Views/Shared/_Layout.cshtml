@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Revosoft</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Revosoft.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <input type="checkbox" id="active" />
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            <div class="wrapper">
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="Cars">Cars</a></li>
+                    <li><a asp-controller="Home" asp-action="Skills" asp-route-id="@User.FindFirst(ClaimTypes.NameIdentifier).Value">Skills</a></li>
+                    <li><a asp-controller="Home" asp-action="Store">Store</a></li>
+                    <li><a asp-controller="Home" asp-action="Logout">Logout</a></li>
+                </ul>
+            </div>
+            <div id="header">
+                <a class="header-title" asp-action="Index">Ford System</a>
+            </div>
+            
+        </div>
+        <div class="">
+            @await Component.InvokeAsync("CarrinhoCompraResumo")
+        </div>
+        @*        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Revosoft</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </nav>*@
+    </header>
+    <div class="container" style="max-width: 100%;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="js/navbar.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/af8cf33c43.js"
+            crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

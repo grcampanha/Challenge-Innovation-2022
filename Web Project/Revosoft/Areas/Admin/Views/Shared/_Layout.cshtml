@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Revosoft</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Revosoft.styles.css" asp-append-version="true" />
+</head>
+<body id="body">
+    <header>
+        <div class="header">
+            <input type="checkbox" id="active" />
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            <div class="wrapper">
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Cars">Cars</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Skills" asp-route-id="@User.FindFirst(ClaimTypes.NameIdentifier).Value">Skills</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Store">Store</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                </ul>
+            </div>
+            <div id="header">
+                <a class="header-title" asp-area="" asp-controller="Home" asp-action="Index">Ford Admin</a>
+            </div>
+            <div class="nav-item">@await Component.InvokeAsync("CarrinhoCompraResumo")
+            </div>
+        </div>
+    </header>
+    <div class="container" style="max-width: 100%;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="js/navbar.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/af8cf33c43.js"
+            crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

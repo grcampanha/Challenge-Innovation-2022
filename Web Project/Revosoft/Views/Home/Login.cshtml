@@ -1,0 +1,73 @@
+﻿@*@model ReflectionIT.Mvc.Paging.PagingList<Revosoft.Models.Usuarios>*@
+@model Revosoft.Models.Usuarios
+@{
+    ViewData["Title"] = "Login Page";
+
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Revosoft</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="~/Revosoft.styles.css" asp-append-version="true" />
+</head>
+
+<body id="body">
+    <section class="box_login">
+        <h2>SIGN IN</h2>
+
+        <form asp-controller="Home" asp-action="Login" method="post">
+@*            <div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-label-group">
+                <input type="text" id="email" name="email" class="form-control" placeholder="Login" required autofocus>
+            </div>
+
+            <div class="form-label-group">
+                <input type="password" id="senha" name="senha" class="form-control" placeholder="Password" required>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-3">
+                <input hidden type="checkbox" class="custom-control-input" id="customCheck1" name="manterlogado">
+                <label hidden class="custom-control-label" for="customCheck1">Manter Logado?</label>
+            </div>
+
+            <button id="btn-login" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Login</button>
+
+            @*            <input asp-for="Email" class="user_form" placeholder="e-mail" type="email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+
+            <input asp-for="Senha" class="user_form" placeholder="password" type="password" />
+            <span asp-validation-for="Senha" class="text-danger"></span>
+
+            <a asp-controller="Home" asp-action="Login"><button>login</button></a>*@
+            <p>or login with</p>
+            <div class="facebook">
+                <img src="~/img/social_medias/facebook.png" alt="" srcset="" />
+                <p>Facebook</p>
+            </div>
+            <div class="google">
+                <img src="~/img/social_medias/google.png" alt="" srcset="" />
+                <p>Google</p>
+            </div>
+
+            <p>Not a member? <a asp-controller="Home" asp-action="Signup">Sign up now</a></p>
+        </form>
+    </section>
+</body>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="js/navbar.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://kit.fontawesome.com/af8cf33c43.js"
+        crossorigin="anonymous"></script>

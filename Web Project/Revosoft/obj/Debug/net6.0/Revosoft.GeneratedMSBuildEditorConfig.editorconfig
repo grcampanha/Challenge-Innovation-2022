@@ -1,0 +1,152 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Revosoft
+build_property.RootNamespace = Revosoft
+build_property.ProjectDir = C:\Users\guilh\OneDrive\Documents\Revosoft\WEB\FORD_NEXT_FIAP\Revosoft\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\guilh\OneDrive\Documents\Revosoft\WEB\FORD_NEXT_FIAP\Revosoft
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminPedidos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminPedidos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminPedidos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminPedidos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminPedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminPedidos/PedidoNotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXFBlZGlkb05vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminPedidos/PedidoStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXFBlZGlkb1N0b3JlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminStore/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TdG9yZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminStore/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TdG9yZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminStore/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TdG9yZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminStore/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TdG9yZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/AdminStore/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TdG9yZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/CarrinhoCompra/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9Db21wcmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/AddCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRDYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/Cars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/DeleteVeiculo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGVWZWljdWxvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/Roda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSb2RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/Signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/Skills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTa2lsbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/SkillsCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTa2lsbHNDYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Home/Store.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdG9yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Pedido/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENoZWNrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Pedido/CheckoutCompleto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENoZWNrb3V0Q29tcGxldG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Shared/Components/CarrinhoCompraResumo/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FycmluaG9Db21wcmFSZXN1bW9cRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-hf3bzako7h
+
+[C:/Users/guilh/OneDrive/Documents/Revosoft/WEB/FORD_NEXT_FIAP/Revosoft/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xz2eks4y2q

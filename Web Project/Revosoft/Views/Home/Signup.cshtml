@@ -1,0 +1,57 @@
+﻿@model Revosoft.Models.Usuarios
+
+@{
+    ViewData["Title"] = "Register Page";
+
+    Layout = null;
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Revosoft</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="~/Revosoft.styles.css" asp-append-version="true" />
+</head>
+
+<body id="body">
+    <section class="box_register">
+        <h2>SIGN UP</h2>
+        <form asp-action="signup">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Email" id="bug-register" class="user_form" placeholder="e-mail" type="email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+
+            <input asp-for="Nome" class="user_form" placeholder="nome" type="nome" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+
+            <input asp-for="Sobrenome" class="user_form" placeholder="sobrenome" type="sobrenome" />
+            <span asp-validation-for="Sobrenome" class="text-danger"></span>
+
+            <input asp-for="Telefone" class="user_form" placeholder="telefone" type="telefone" />
+            <span asp-validation-for="Telefone" class="text-danger"></span>
+
+            <input asp-for="Senha" id="bug-register" class="user_form" placeholder="password" type="password" />
+            <span asp-validation-for="Senha" class="text-danger"></span>
+
+@*            <input type="submit" value="signup" />*@
+            <a asp-controller="Home" asp-action="Login"><button>Sign Up</button></a>
+            @*<a asp-controller="Home" asp-action="Login"><button>Sign Up</button></a>*@
+        </form>
+    </section>
+</body>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="js/navbar.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://kit.fontawesome.com/af8cf33c43.js"
+        crossorigin="anonymous"></script>

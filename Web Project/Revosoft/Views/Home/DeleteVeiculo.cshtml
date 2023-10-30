@@ -1,0 +1,40 @@
+﻿@model Revosoft.Models.Veiculos
+
+@{
+    ViewData["Title"] = "Delete Veiculo";
+}
+<body id="body">
+    <section class="delete">
+    <h1>Deletar</h1>
+
+    <h3>Você tem certeza que deseja remover este veículo?</h3>
+    <div>
+        <h4>Veículos</h4>
+        <hr />
+
+        <div id="table-delete" class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="header-title mb-3">Informações do Veículo</h5>
+
+                        <h5>@Html.DisplayFor(model => model.Placa)</h5>
+
+                        <address class="mb-0 font-14 address-lg">
+                            @Html.DisplayFor(model => model.Modelo), @Html.DisplayFor(model => model.Modelo)<br>
+                            @Html.DisplayFor(model => model.Ano), @Html.DisplayFor(model => model.Ano)<br>
+                        </address>
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div>
+
+            <form id="btn-delete" asp-action="DeleteVeiculo">
+            <input type="hidden" asp-for="VeiculosId" />
+            <input type="submit" value="Deletar" class="btn btn-danger" />
+            <a class="btn btn-primary" asp-action="Cars">Voltar</a>
+        </form>
+    </div>
+    </section>
+</body>

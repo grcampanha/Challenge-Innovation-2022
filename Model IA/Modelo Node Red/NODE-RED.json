@@ -1,0 +1,191 @@
+[
+    {
+        "id": "7b48da8a0f0a1fe2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d78953c334c4d69c",
+        "type": "mqtt in",
+        "z": "7b48da8a0f0a1fe2",
+        "name": "Mensagem",
+        "topic": "ESP32/PUBLISH",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "631d1bc4bb70d109",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "ff7e0ac7a9845f66"
+            ]
+        ]
+    },
+    {
+        "id": "3fb7da4ccbc56480",
+        "type": "debug",
+        "z": "7b48da8a0f0a1fe2",
+        "name": "Geral",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ff7e0ac7a9845f66",
+        "type": "csv",
+        "z": "7b48da8a0f0a1fe2",
+        "name": "separete",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temperatura,umidade",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 380,
+        "y": 240,
+        "wires": [
+            [
+                "76fce1dc99ea282a"
+            ]
+        ]
+    },
+    {
+        "id": "76fce1dc99ea282a",
+        "type": "function",
+        "z": "7b48da8a0f0a1fe2",
+        "name": "Objeto",
+        "func": "const temperatura = msg.payload.temperatura\nconst umidade = msg.payload.umidade\nconst sensor = \"'DHT11'\"\n\nmsg.payload = {}\nmsg.payload.temperatura = temperatura\nmsg.payload.humidade = umidade\nmsg.payload.sensor = sensor\n\nmsg.topic = \"INSERT INTO SensorTeste (temperatura , umidade, sensor) VALUES (\"+temperatura + \",\" + umidade + \",\" + sensor+\")\"\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "d09426c9fdb1002a"
+            ]
+        ],
+        "inputLabels": [
+            "red"
+        ],
+        "outputLabels": [
+            "Saida"
+        ]
+    },
+    {
+        "id": "54434bf6d087f22b",
+        "type": "MSSQL",
+        "z": "7b48da8a0f0a1fe2",
+        "mssqlCN": "9548afa5f43a5654",
+        "name": "",
+        "query": "",
+        "outField": "topic",
+        "x": 780,
+        "y": 240,
+        "wires": [
+            [
+                "3fb7da4ccbc56480"
+            ]
+        ]
+    },
+    {
+        "id": "6b488d1c01323773",
+        "type": "inject",
+        "z": "7b48da8a0f0a1fe2",
+        "name": "Teste",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "SELECT TOP (1000) [SensorId]       ,[temperatura]       ,[umidade]       ,[sensor]   FROM [Revosoft].[dbo].[SensorTeste]",
+        "payloadType": "str",
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "54434bf6d087f22b"
+            ]
+        ]
+    },
+    {
+        "id": "d09426c9fdb1002a",
+        "type": "function",
+        "z": "7b48da8a0f0a1fe2",
+        "name": "function 1",
+        "func": "msg.payload = msg.topic\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "54434bf6d087f22b"
+            ]
+        ]
+    },
+    {
+        "id": "631d1bc4bb70d109",
+        "type": "mqtt-broker",
+        "name": "ESP 32",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9548afa5f43a5654",
+        "type": "MSSQL-CN",
+        "name": "REVOSOFT ",
+        "server": "DESKTOP-MA9TV66\\SQLEXPRESS",
+        "encyption": true,
+        "database": "Revosoft"
+    }
+]

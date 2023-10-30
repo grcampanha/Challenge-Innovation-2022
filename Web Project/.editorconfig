@@ -1,0 +1,22 @@
+﻿[*.cs]
+
+# CS8618: Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+dotnet_diagnostic.CS8618.severity = silent
+
+# CS8600: Converting null literal or possible null value to non-nullable type.
+dotnet_diagnostic.CS8600.severity = none
+
+# CS8602: Dereference of a possibly null reference.
+dotnet_diagnostic.CS8602.severity = none
+
+# CS8620: O argumento não pode ser usado para o parâmetro devido a diferenças na nulidade dos tipos de referência.
+dotnet_diagnostic.CS8620.severity = none
+
+# CS8601: Possível atribuição de referência nula.
+dotnet_diagnostic.CS8601.severity = none
+
+# CS8604: Possível argumento de referência nula.
+dotnet_diagnostic.CS8604.severity = none
+
+# CS8629: O tipo de valor de nulidade pode ser nulo.
+dotnet_diagnostic.CS8629.severity = none

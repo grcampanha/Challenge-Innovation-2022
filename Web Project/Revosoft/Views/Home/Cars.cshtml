@@ -1,0 +1,75 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<Revosoft.Models.Veiculos>
+
+@{
+    ViewData["Title"] = "Cars Page";
+}
+
+<body id="body">
+    <section>
+        <h2 class="title">CARS</h2>
+
+        <a asp-action="AddCar">
+            <div class="add">
+                <img src="~/css/img/cars/" alt="" srcset="" />
+                <h2>ADD CAR</h2>
+            </div>
+        </a>
+
+
+        @foreach (var item in Model)
+        {
+            string carro = item.Modelo;
+            <a asp-controller="Home" asp-action="SkillsCar" asp-route-id="@item.VeiculosId">
+                <div class="car">
+                    @if (carro == "Mustang")
+                    {
+                        @Html.Raw("<img src='/img/cars/mustang.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Ka Hatch" || carro == "Ka Sedan")
+                    {
+                        @Html.Raw("<img src='/img/cars/fordka.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Ranger")
+                    {
+                        @Html.Raw("<img src='/img/cars/ranger.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Bronco")
+                    {
+                        @Html.Raw("<img src='/img/cars/bronco.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "EcoSport")
+                    {
+                        @Html.Raw("<img src='/img/cars/ecosport.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Edge ST")
+                    {
+                        @Html.Raw("<img src='/img/cars/edgest.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Fusion")
+                    {
+                        @Html.Raw("<img src='/img/cars/fusion.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Maverick")
+                    {
+                        @Html.Raw("<img src='/img/cars/maverick.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Territory")
+                    {
+                        @Html.Raw("<img src='/img/cars/territory.png' alt='' srcset='' />")
+                    }
+                    @if (carro == "Transit")
+                    {
+                        @Html.Raw("<img src='/img/cars/transit.png' alt='' srcset='' />")
+                    }
+                    <h2>@Html.DisplayFor(modelItem => item.Placa)</h2>
+                    <p>Model: @Html.DisplayFor(modelItem => item.Modelo)</p>
+                    <p>Year: @Html.DisplayFor(modelItem => item.Ano)</p>
+                    <p>Status: <span class="activated">activated</span></p>
+                <div class="remove-car">
+                <a asp-action="DeleteVeiculo" asp-route-id="@item.VeiculosId">REMOVE</a>
+            </div>
+            </div>
+            </a>
+        }
+    </section>
+</body>

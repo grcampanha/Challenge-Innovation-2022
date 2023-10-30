@@ -1,0 +1,81 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<Revosoft.Models.Store>
+
+@{
+    ViewData["Title"] = "Store Page";
+}
+
+<body id="body">
+    <section>
+        <h2 class="title">STORE</h2>
+        @foreach (var item in Model)
+        {
+            if (item.Categoria == "Car Battery")
+            {
+                <a href="roda.html">
+                    <div class="product">
+                        <img src="~/img/products/discoFreio.png" alt="" srcset="" />
+                        <h2>@item.Produto</h2>
+                        <h3>@item.Categoria</h3>
+                        <p>USD @item.Preco</p>
+                        <a class="btn-buy" id="cartButton" asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-storeId="@item.StoreId">
+                            Add to Cart
+                        </a>
+                    </div>
+                </a>
+            }
+            if(item.Categoria == "Car Brake"){
+                <a href="roda.html">
+                    <div class="product">
+                        <img src="~/img/products/discoFreio.png" alt="" srcset="" />
+                        <h2>@item.Produto</h2>
+                        <h3>@item.Categoria</h3>
+                        <p>USD @item.Preco</p>
+                        <a class="btn-buy" id="cartButton" asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-storeId="@item.StoreId">
+                            Add to Cart
+                        </a>
+                    </div>
+                </a>
+            }
+            if(item.Categoria == "Car Cambio"){
+                <a href="roda.html">
+                    <div class="product">
+                        <img src="~/img/products/discoFreio.png" alt="" srcset="" />
+                        <h2>@item.Produto</h2>
+                        <h3>@item.Categoria</h3>
+                        <p>USD @item.Preco</p>
+                        <a class="btn-buy" id="cartButton" asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-storeId="@item.StoreId">
+                            Add to Cart
+                        </a>
+                    </div>
+                </a>
+            }
+            if(item.Categoria == "Car Engine"){
+                <a href="roda.html">
+                    <div class="product">
+                        <img src="~/img/products/motor.png" alt="" srcset="" />
+                        <h2>@item.Produto</h2>
+                        <h3>@item.Categoria</h3>
+                        <p>USD @item.Preco</p>
+                        <a class="btn-buy" id="cartButton" asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-storeId="@item.StoreId">
+                            Add to Cart
+                        </a>
+                    </div>
+                </a>
+            }
+            if (item.Categoria == "Car Wheel")
+            {
+                <a href="roda.html">
+                    <div class="product">
+                        <img src="~/img/products/pneu.png" alt="" srcset="" />
+                        <h2>@item.Produto</h2>
+                        <h3>@item.Categoria</h3>
+                        <p>USD @item.Preco</p>
+                        <a class="btn-buy" id="cartButton" asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-storeId="@item.StoreId">
+                            Add to Cart
+                        </a>
+                    </div>
+                </a>
+            }
+        }
+    </section>
+</body>

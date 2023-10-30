@@ -1,0 +1,89 @@
+﻿@model Revosoft.Models.Veiculos
+
+@{
+    ViewData["Title"] = "Score Page";
+}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body id="body-skills">
+    <section>
+        <h2 class="title">SKILLS</h2>
+        <div class="box-skills">
+            <div class="top-box">
+                @{
+                    string carro = Model.Modelo;
+                    string veiculoId = Model.VeiculosId.ToString();
+                }
+                @if (carro == "Mustang")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/mustang1.png' alt=''>")
+                }
+                @if (carro == "Ka Hatch")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/ka-hatch.png' alt=''>")
+                }
+                @if (carro == "Ka Sedan")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/ka-sedan.png' alt=''>")
+                }
+                @if (carro == "Ranger")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/ranger.png' alt=''>")
+                }
+                @if (carro == "Bronco")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/bronco.png' alt=''>")
+                }
+                @if (carro == "EcoSport")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/ecosport.png' alt=''>")
+                }
+                @if (carro == "Edge ST")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/edge-st.png' alt=''>")
+                }
+                @if (carro == "Fusion")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/fusion.png' alt=''>")
+                }
+                @if (carro == "Maverick")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/maverick.png' alt=''>")
+                }
+                @if (carro == "Territory")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/territory.png' alt=''>")
+                }
+                @if (carro == "Transit")
+                {
+                    @Html.Raw("<img src='/img/cars/3D/transit.png' alt=''>")
+                }
+                <h1>@Html.DisplayFor(model => model.Modelo)</h1>
+                <h2 class="year">Year: <span>@Html.DisplayFor(model => model.Ano)</span></h2>
+                <h2 class="status">Status: <span class="available">Available</span></h2>
+            </div>
+            <div class="bottom-box">
+                <h1>Scores</h1>
+                <h2 class="engine">Car Engine</h2>
+                <h2 class="wheel">Car Traction Set</h2>
+                <h2 class="cambio">Car Cambio</h2>
+                <h2 class="bateria">Car Battery</h2>
+                @foreach (var item in Model.Pecas)
+                {
+                    <h2 class="score-engine"><span>@item.MotorScore</span> /100</h2>
+                    <h2 class="score-wheel"><span>@item.PneuScore</span> /100</h2>
+                    <h2 class="score-cambio"><span>@item.CambioScore</span> /100</h2>
+                    <h2 class="score-bateria"><span>@item.BateriaScore</span> /100</h2>
+                }
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    function autoRefresh() {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefresh()', 5000);
+</script>

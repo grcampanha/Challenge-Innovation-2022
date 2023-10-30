@@ -1,0 +1,78 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<Revosoft.Models.Store>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color: white">Produtos</h1>
+
+<form method="get" class="form-inline">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <input name="filter" class="form-control" placeholder="filtro"
+                   value="@Model.RouteValue["Filter"]" />
+        </div>
+        <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Procurar
+            </button>
+        </div>
+    </div>
+
+</form>
+
+<p style="color: white">Total de Produtos : @Model.TotalRecordCount</p>
+
+<p>
+    @*<a asp-action="Create">Adicionar Produto</a>*@
+    <a class="btn btn-primary" id="cartButton" asp-action="Create">
+        Adicionar Produto
+    </a>
+</p>
+
+<div class="row">
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produto)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Categoria)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Preco)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Produto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Categoria)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.StoreId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.StoreId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.StoreId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div>
+    <vc:pager paging-list="@Model"></vc:pager>
+</div>
